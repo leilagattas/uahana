@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.infoPlan {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #00226D;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+
+nav {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-brand {
+    margin: 0 5%;
+}
+
+/* Busqueda */
+.form-inline {
+    background-color: #EAEBED;
+    border-radius: 30px;
+    padding-right: 30px;
+}
+
+.form-control {
+    border: 0px;
+    background-color: #EAEBED;
+}
+
+textarea:focus,
+input:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.linkIni {
+    color: #43525B;
+    font-weight: 400;
+}
+
+.linkIni:hover {
+    color: #DA0024;
+    text-decoration: none;
+}
+
+
+button {
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.suscribe,
+.login:hover {
+    background-color: white;
+    color: #00226D;
+    border: 1px solid #00226D;
+}
+
+.login,
+.suscribe:hover {
+    background-color: #00226D;
+    color: white;
+    border: 1px solid;
+}
