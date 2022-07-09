@@ -1,0 +1,83 @@
+* {}
+
+main {
+    background-image: url("../../../assets/BackNecesitas.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: var(--open-sans);
+    padding: 5% 15%;
+}
+
+h2 {
+    color: white;
+    font-weight: 600;
+    font-size: var(--titulos-h2);
+}
+
+p {
+    color: white;
+    font-size: var(--subtitulos);
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+input {
+    color: #C4C4C4;
+    padding: 20px 10px;
+    font-size: var(--subtitulos);
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+    margin-right: 5px;
+    font-size: var(--subtitulos);
+}
+
+h5 {
+    color: white;
+    font-size: var(--subtitulos);
+    margin-top: 3%;
+    font-weight: 200;
+}
+
+.card {
+    background-color: var(--secundario-claro1);
+    border-radius: 10px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgDestacado {
+    text-align: right;
+    width: 90%;
+}
+
+img {
+    width: 50%;
+}
+
+.card-title {
+    color: #00226D;
+    font-weight: 700;
+    font-size: var(--menu-items);
+}
+
+.card-text {
+    color: var(--gris-oscuro-tipografia);
+    font-size: var(--subtitulos);
+}
+
+.verMas {
+    color: var(--rojo-logo);
+    font-weight: 700;
+}
+
+.row {
+    margin-top: 35px;
+}

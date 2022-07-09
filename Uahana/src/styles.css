@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --gris-oscuro-tipografia: #43525B;
+    --secundario-claro1: #EAEBED;
+    --secundario2: #A3BAC3;
+    --azul-logo: #00226D;
+    --rojo-logo: #DA0024;
+    --titulos-h2: 28px;
+    --menu-items: 16px;
+    --subtitulos: 14px;
+    --parrafos: 12px;
+    --open-sans: 'Open Sans', sans-serif;
+}

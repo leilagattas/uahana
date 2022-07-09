@@ -10,6 +10,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { LoginComponent } from './components/login/login.component';
 import { ComofuncionaComponent } from './components/comofunciona/comofunciona.component';
 import { SuscripcionesComponent } from './components/suscripciones/suscripciones.component';
+import { FormaparteComponent } from './components/formaparte/formaparte.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SuscripcionesComponent } from './components/suscripciones/suscripciones
     SpinnerComponent,
     LoginComponent,
     ComofuncionaComponent,
-    SuscripcionesComponent
+    SuscripcionesComponent,
+    FormaparteComponent
   ],
   imports: [
     BrowserModule,
