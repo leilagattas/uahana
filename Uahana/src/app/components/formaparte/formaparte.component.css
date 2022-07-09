@@ -1,0 +1,25 @@
+* {
+    background-image: url("../../../assets/backFormaParte.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.formaParte {
+    height: 800px;
+    padding-top: 60px;
+}
+
+h2 {
+    color: var(--azul-logo);
+    font-size: var(--titulos-h2);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: var(--subtitulos);
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+footer {
+    background-color: var(--azul-logo);
+    color: white;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+}
+
+img {
+    margin-bottom: 25px;
+}
+
+.leftFooter {
+    text-align: center;
+}
+
+.leftFooter p {
+    font-size: var(--parrafos);
+    margin-top: -10px;
+}
+
+.rightFooter {
+    display: flex;
+}
+
+.options {
+    margin-left: 25px;
+}
+
+a {
+    color: white;
+    margin-top: 30px;
+}
+
+h5 {
+    font-size: var(--subtitulos);
+    font-weight: 700;
+}
+
+i {
+    font-size: 50px;
+    color: white;
+}
