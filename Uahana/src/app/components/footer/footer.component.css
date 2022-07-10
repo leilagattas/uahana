@@ -2,20 +2,26 @@ footer {
     background-color: var(--azul-logo);
     color: white;
     padding: 30px 8%;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    font-family: var(--open-sans);
 }
 
 .mainFooter {
     display: flex;
     justify-content: space-between;
-    width: 80%;
     padding-bottom: 30px;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
+    width: 70%;
 }
 
 img {
     margin-bottom: 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
 }
 
 .leftFooter {
@@ -32,12 +38,17 @@ img {
 }
 
 .options {
-    margin-left: 25px;
+    margin-left: 40px;
+}
+
+.contactanos {
+    width: 15%;
 }
 
 a {
     color: white;
     margin-top: 30px;
+    line-height: 30px;
 }
 
 h5 {
@@ -45,7 +56,17 @@ h5 {
     font-weight: 700;
 }
 
+.redes {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+}
+
 i {
-    font-size: 50px;
+    font-size: 25px;
     color: white;
+}
+
+.line {
+    border-top: 1px solid white;
 }
