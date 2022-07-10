@@ -1,0 +1,26 @@
+main {
+    padding: 20px 0;
+    font-family: var(--open-sans);
+}
+
+h2 {
+    font-size: var(--titulos-h1);
+    color: var(--azul-logo);
+    text-align: center;
+}
+
+.tipoReg {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 30%;
+    border-bottom: 1px solid #EAEBED;
+
+}
+
+label {
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: var(--subtitulos);
+    line-height: 25px;
+    margin-top: 10px;
+}

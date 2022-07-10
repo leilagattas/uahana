@@ -11,6 +11,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ComofuncionaComponent } from './components/comofunciona/comofunciona.component';
 import { SuscripcionesComponent } from './components/suscripciones/suscripciones.component';
 import { FormaparteComponent } from './components/formaparte/formaparte.component';
+import { RegisterComponent } from './components/register/register.component';
+import { RegisterEmprendedorComponent } from './components/register-emprendedor/register-emprendedor.component';
+import { RegisterClienteComponent } from './components/register-cliente/register-cliente.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { FormaparteComponent } from './components/formaparte/formaparte.componen
     LoginComponent,
     ComofuncionaComponent,
     SuscripcionesComponent,
-    FormaparteComponent
+    FormaparteComponent,
+    RegisterComponent,
+    RegisterEmprendedorComponent,
+    RegisterClienteComponent
   ],
   imports: [
     BrowserModule,
