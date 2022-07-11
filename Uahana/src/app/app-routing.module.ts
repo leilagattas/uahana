@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComofuncionaComponent } from './components/comofunciona/comofunciona.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'inicio', component: MainComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'contacto', component: ContactoComponent },
   // { path: 'recuperarPass', component: RecuperarPassComponent },
   // { path: 'recuperarPass/:id', component: RecuperarPassComponent },
   { path: '**', redirectTo: '/inicio' }
