@@ -1,0 +1,48 @@
+main {
+    padding: 20px 10%;
+    font-family: var(--open-sans);
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: var(--titulos-h1);
+    color: var(--azul-logo);
+    text-align: left;
+    font-weight: 700;
+}
+
+table {
+    margin-top: 30px;
+    border: none;
+    width: 50%;
+}
+
+.nameLabel {
+    font-size: var(--subtitulos);
+}
+
+.valueLabel {
+    color: var(--gris-oscuro-tipografia);
+    font-size: var(--subtitulos);
+    font-weight: 700;
+}
+
+.options {
+    margin-top: 30px;
+    color: var(--azul-logo);
+    font-size: var(--subtitulos);
+    font-weight: 700;
+}
+
+i {
+    margin-right: 5px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

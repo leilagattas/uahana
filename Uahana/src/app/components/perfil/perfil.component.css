@@ -1,0 +1,35 @@
+main {
+    display: flex;
+}
+
+main div {
+    background-color: #EAEBED;
+    width: 25%;
+}
+
+img {
+    padding: 10% 30%;
+}
+
+.menu {
+    margin-top: 20px;
+    font-size: var(--menu-items);
+    width: 100% !important;
+}
+
+p {
+    color: var(--gris-oscuro-tipografia);
+    padding: 3% 30%;
+}
+
+p:hover {
+    background-color: white;
+    color: var(--azul-logo);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.info {
+    width: 75%;
+}

@@ -18,6 +18,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { DatosPersonalesComponent } from './components/perfil/datos-personales/datos-personales.component';
 import { MisTrabajosComponent } from './components/perfil/mis-trabajos/mis-trabajos.component';
 import { MisSuscripcionesComponent } from './components/perfil/mis-suscripciones/mis-suscripciones.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MisSuscripcionesComponent } from './components/perfil/mis-suscripciones
     ContactoComponent,
     DatosPersonalesComponent,
     MisTrabajosComponent,
-    MisSuscripcionesComponent
+    MisSuscripcionesComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
