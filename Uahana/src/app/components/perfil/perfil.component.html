@@ -3,10 +3,18 @@
         <img src="../../../assets/fotoPerfil.png" alt="fotoPerfil">
         <br>
         <div class="menu">
-            <p class="link active">Datos Personales</p> <br>
-            <p class="link">Mis Trabajos</p> <br>
-            <p class="link">Suscripciones</p> <br>
+            <p [ngClass]="datosPersonales? 'link activo' : 'link'"
+                (click)="datosPersonales = true; misTrabajos = false; misSuscripciones = false">
+                Datos Personales</p> <br>
+            <p [ngClass]="misTrabajos? 'link activo' : 'link'"
+                (click)="misTrabajos = true; datosPersonales = false; misSuscripciones = false">Mis
+                Trabajos</p> <br>
+            <p [ngClass]="misSuscripciones? 'link activo' : 'link'"
+                (click)="misSuscripciones = true; datosPersonales = false; misTrabajos = false">
+                Suscripciones</p> <br>
         </div>
     </div>
-    <app-datos-personales class="info"></app-datos-personales>
+    <app-datos-personales class="info" *ngIf="datosPersonales"></app-datos-personales>
+    <app-mis-trabajos class="info" *ngIf="misTrabajos"></app-mis-trabajos>
+    <app-mis-suscripciones class="info" *ngIf="misSuscripciones"></app-mis-suscripciones>
 </main>

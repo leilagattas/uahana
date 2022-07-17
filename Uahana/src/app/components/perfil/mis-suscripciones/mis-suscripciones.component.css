@@ -1,0 +1,49 @@
+main {
+    padding: 20px 10%;
+    font-family: var(--open-sans);
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: var(--titulos-h1);
+    color: var(--azul-logo);
+    text-align: left;
+    font-weight: 700;
+}
+
+h6 {
+    color: var(--gris-oscuro-tipografia);
+    font-size: var(--subtitulos);
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: var(--menu-items);
+    color: var(--gris-oscuro-tipografia);
+    margin: 30px 0;
+}
+
+.activo {
+    color: #6CD383;
+    font-size: var(--subtitulos);
+    font-weight: 700;
+}
+
+.editSus:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.editSus {
+    color: #00226D;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+div {
+    border-top: 1px solid #EAEBED;
+}

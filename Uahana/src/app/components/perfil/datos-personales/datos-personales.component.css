@@ -17,6 +17,11 @@ table {
     width: 50%;
 }
 
+td {
+    padding: 5px 15px;
+    vertical-align: top;
+}
+
 .nameLabel {
     font-size: var(--subtitulos);
 }

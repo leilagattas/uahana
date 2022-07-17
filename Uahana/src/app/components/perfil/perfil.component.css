@@ -22,7 +22,8 @@ p {
     padding: 3% 30%;
 }
 
-p:hover {
+p:hover,
+.activo {
     background-color: white;
     color: var(--azul-logo);
     font-weight: 700;

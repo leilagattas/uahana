@@ -1,0 +1,106 @@
+main {
+    padding: 20px 10%;
+    font-family: var(--open-sans);
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: var(--titulos-h1);
+    color: var(--azul-logo);
+    text-align: left;
+    font-weight: 700;
+}
+
+h6 {
+    color: var(--rojo-logo);
+    font-size: var(--subtitulos);
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+button {
+    font-size: var(--subtitulos);
+    background-color: var(--azul-logo);
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+}
+
+button:hover {
+    color: var(--azul-logo);
+    background-color: white;
+    border: 1px solid var(--azul-logo);
+}
+
+h4 {
+    font-size: var(--menu-items);
+    color: var(--gris-oscuro-tipografia);
+    font-weight: 600;
+    margin-top: 30px;
+    border-top: 1px solid #EAEBED;
+    padding-top: 10px;
+}
+
+table {
+    margin-top: 30px;
+    border: none;
+    width: 50%;
+}
+
+td {
+    padding: 5px 15px;
+    vertical-align: top;
+}
+
+.nameLabel {
+    font-size: var(--subtitulos);
+    width: 10%;
+}
+
+.valueLabel {
+    color: var(--gris-oscuro-tipografia);
+    font-size: var(--subtitulos);
+    font-weight: 700;
+    width: 30%;
+}
+
+.options {
+    margin-top: 30px;
+    color: var(--azul-logo);
+    font-size: var(--subtitulos);
+    font-weight: 700;
+    border-top: 1px solid #EAEBED;
+    padding-top: 10px;
+}
+
+i {
+    margin-right: 5px;
+}
+
+.options p {
+    margin-top: 20px;
+}
+
+.options p:hover,
+.editSus:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.editSus {
+    color: #00226D;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 20px
+}
+
+.imagenes {
+    display: flex;
+}
+
+img {
+    width: 100px;
+    padding-right: 10px;
+}
