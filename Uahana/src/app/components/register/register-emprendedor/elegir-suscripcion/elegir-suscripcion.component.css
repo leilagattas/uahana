@@ -1,52 +1,49 @@
 .formaParte {
-    background-image: url("../../../assets/backFormaParte.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 60px 0;
+    padding: 60px 80px;
 }
 
 h2 {
     color: var(--azul-logo);
     font-size: var(--titulos-h2);
-    text-align: center;
+    text-align: left;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 p {
     font-size: var(--subtitulos);
-    text-align: center;
+    text-align: left;
 }
 
 .planes {
-    text-align: center;
-    margin: 0 15%;
+    margin-top: 50px;
 }
 
-h4 {
-    width: 100%;
-    border-bottom: 1px solid white;
-    line-height: 0.1em;
-    margin: 50px 0;
-    color: var(--azul-logo);
-    font-size: var(--menu-items);
-    font-weight: 700;
-}
+h2 span {
+    margin-right: 50px;
+    color: var(--secundario2);
+    border: 1px solid var(--secundario2);
+    padding: 5px 15px;
+    border-radius: 50%;
 
-h4 span {
-    padding: 0 20px;
 }
 
 .opcionesPlanes {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .plan {
     background-color: white;
-    padding: 90px 20px;
+    padding: 50px 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.plan:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 h3 {
@@ -76,14 +73,14 @@ h3 {
 .recomendado {
     border: 1px solid var(--rojo-logo);
     border-top: 40px solid var(--rojo-logo);
-    padding: 20px 20px;
+    padding: 0px 20px;
 }
 
 h5 {
     color: white;
     font-weight: 700;
     position: relative;
-    top: -50px;
+    top: -30px;
 }
 
 .info {
@@ -96,8 +93,21 @@ h5 {
     font-size: var(--menu-items);
 }
 
+.infoAzul {
+    color: var(--azul-logo);
+    font-weight: 700;
+    font-size: var(--menu-items);
+    text-align: center !important;
+}
+
+.infoAzul span {
+    font-weight: 500;
+    font-size: var(--subtitulos);
+}
+
+
 button {
-    margin-top: 40px;
+    margin-top: 10px;
     font-weight: 700;
     color: white;
     background-color: var(--azul-logo);
@@ -114,4 +124,23 @@ button:hover {
 .notInc,
 .notInc i {
     color: var(--secundario2) !important;
+}
+
+table {
+    border: 0px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+td {
+    border-bottom: 1px solid #EAEBED;
+    font-size: var(--subtitulos);
+    text-align: left;
+    padding: 20px 30px;
+}
+
+.tipoE {
+    color: var(--azul-logo);
+    font-weight: 700;
 }

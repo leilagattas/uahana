@@ -57,6 +57,7 @@ button {
     border-radius: 20px;
     margin-left: 20px;
     font-weight: 600;
+    font-size: var(--subtitulos);
 }
 
 .suscribe,

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CargarTrabajoComponent } from './components/cargar-trabajo/cargar-trabajo.component';
-import { ComofuncionaComponent } from './components/comofunciona/comofunciona.component';
+import { CargarTrabajoComponent } from './components/register/register-emprendedor/cargar-trabajo/cargar-trabajo.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ElegirSuscripcionComponent } from './components/register/register-emprendedor/elegir-suscripcion/elegir-suscripcion.component';
 // import { RecuperarPassComponent } from './components/recuperar-pass/recuperar-pass.component';
 
 const routes: Routes = [
@@ -17,6 +17,8 @@ const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'cargarTrabajo', component: CargarTrabajoComponent },
+  { path: 'elegirSuscripcion', component: ElegirSuscripcionComponent },
+
   // { path: 'recuperarPass/:id', component: RecuperarPassComponent },
   { path: '**', redirectTo: '/inicio' }
 

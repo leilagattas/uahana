@@ -1,0 +1,117 @@
+.formaParte {
+    background-image: url("../../../../assets/backFormaParte.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 60px 0;
+}
+
+h2 {
+    color: var(--azul-logo);
+    font-size: var(--titulos-h2);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: var(--subtitulos);
+    text-align: center;
+}
+
+.planes {
+    text-align: center;
+    margin: 0 15%;
+}
+
+h4 {
+    width: 100%;
+    border-bottom: 1px solid white;
+    line-height: 0.1em;
+    margin: 50px 0;
+    color: var(--azul-logo);
+    font-size: var(--menu-items);
+    font-weight: 700;
+}
+
+h4 span {
+    padding: 0 20px;
+}
+
+.opcionesPlanes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.plan {
+    background-color: white;
+    padding: 90px 20px;
+}
+
+h3 {
+    color: var(--azul-logo);
+    font-size: var(--titulos-h2);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.linea {
+    border-bottom: 5px solid #A3BAC3;
+    margin: 20px 40%;
+}
+
+.plan p {
+    text-align: left;
+}
+
+.inc i {
+    color: green;
+}
+
+.inc p {
+    color: black;
+}
+
+.recomendado {
+    border: 1px solid var(--rojo-logo);
+    border-top: 40px solid var(--rojo-logo);
+    padding: 20px 20px;
+}
+
+h5 {
+    color: white;
+    font-weight: 700;
+    position: relative;
+    top: -50px;
+}
+
+.info {
+    color: var(--rojo-logo);
+    font-weight: 700;
+    text-align: center !important;
+}
+
+.info span {
+    font-size: var(--menu-items);
+}
+
+button {
+    margin-top: 40px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--azul-logo);
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: 1px solid var(--azul-logo);
+}
+
+button:hover {
+    color: var(--azul-logo);
+    background-color: white;
+}
+
+.notInc,
+.notInc i {
+    color: var(--secundario2) !important;
+}
