@@ -21,6 +21,20 @@ p {
     font-weight: 300;
 }
 
+i {
+    margin-left: -30px !important;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+    font-size: var(--menu-items);
+    cursor: pointer;
+    color: var(--secundario-claro1);
+}
+
+.form-control {
+    z-index: 1;
+}
+
 input {
     color: #C4C4C4;
     padding: 20px 10px;

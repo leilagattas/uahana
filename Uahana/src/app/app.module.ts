@@ -19,6 +19,7 @@ import { DatosPersonalesComponent } from './components/perfil/datos-personales/d
 import { MisTrabajosComponent } from './components/perfil/mis-trabajos/mis-trabajos.component';
 import { MisSuscripcionesComponent } from './components/perfil/mis-suscripciones/mis-suscripciones.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { CargarTrabajoComponent } from './components/cargar-trabajo/cargar-trabajo.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     DatosPersonalesComponent,
     MisTrabajosComponent,
     MisSuscripcionesComponent,
-    PerfilComponent
+    PerfilComponent,
+    CargarTrabajoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CargarTrabajoComponent } from './components/cargar-trabajo/cargar-trabajo.component';
 import { ComofuncionaComponent } from './components/comofunciona/comofunciona.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { LoginComponent } from './components/login/login.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'perfil', component: PerfilComponent },
+  { path: 'cargarTrabajo', component: CargarTrabajoComponent },
   // { path: 'recuperarPass/:id', component: RecuperarPassComponent },
   { path: '**', redirectTo: '/inicio' }
 

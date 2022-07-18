@@ -1,0 +1,131 @@
+<main>
+    <h2>Ahora sí, ¡hora de mostrar tu trabajo!</h2>
+    <p class="first">Completá la información de tu emprendimiento. Luego podrás elegir el modelo de suscripción.</p>
+    <div>
+        <form>
+            <div class="pairItems">
+                <div class="form-group col-md-6">
+                    <label for="name">Nombre de tu emprendimiendo</label>
+                    <input type="text" id="name" class="form-control" placeholder="Ingresá tu nombre" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="surname">¿Tu producto/servicio es remoto?</label>
+                    <!-- <input type="text" id="surname" class="form-control" placeholder="Ingresá tu apellido" required> -->
+                </div>
+            </div>
+            <div class="pairItems">
+                <div class="form-group col-md-6">
+                    <label for="provincia">Provincia</label><br>
+                    <select name="provincia" id="provincia">
+                        <option value="">Ciudad donde podés ofrecer tu producto/servicio</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="zona">Zona</label> <br>
+                    <select name="zona" id="zona">
+                        <option value="">Podes elegir más de una</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pairItems">
+                <div class="form-group col-md-6">
+                    <label for="tipo">Tipo</label><br>
+                    <select name="tipo" id="tipo">
+                        <option value="">Producto/Servicio/Ambos</option>
+                    </select> <br>
+                    <label for="categoria">Categoría</label><br>
+                    <select name="categoria" id="categoria">
+                        <option value="">Elegí al menos una categoría de las opciones</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="descripcion">Breve descripción</label> <br>
+                    <textarea id="descripción" placeholder="Resuminos tu trabajo" required></textarea>
+                </div>
+            </div>
+        </form>
+        <div>
+            <form>
+                <h4>Contacto</h4>
+                <p>¿Cómo querés que te contacten para contratarte?</p>
+                <div class="pairItems">
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email"
+                            placeholder="Ingresá el mail donde querés que te contacten" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="telefono">Telefono</label>
+                        <input type="number" class="form-control" id="telefono"
+                            placeholder="Ingresá el teléfono donde querés que te contacten" required>
+                    </div>
+                </div>
+                <div class="pairItems">
+                    <div class="form-group col-md-6">
+                        <label for="celular">Celular</label>
+                        <input type="number" class="form-control" id="celular"
+                            placeholder="Ingresá el celular donde querés que te contacten" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="otros">Otros</label>
+                        <div class="otros">
+                            <input type="text" class="form-control" id="otros" placeholder="Información" required>
+                            <select name="" id="">
+                                <option value="">Etiqueta</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <p>Redes Sociales</p>
+                <div class="pairItems">
+                    <div class="form-group col-md-6 redes">
+                        <img src="../../../assets/Facebook.png" alt="facebookIcon">
+                        <input type="text" class="form-control" id="facebook"
+                            placeholder="Facebook: ingresá tu nombre de usuario" required>
+                    </div>
+                    <div class="form-group col-md-6 redes">
+                        <img src="../../../assets/Instagram.png" alt="instagramIcon">
+                        <input type="text" class="form-control" id="instragram"
+                            placeholder="Instragram: ingresá tu nombre de usuario" required>
+                    </div>
+                </div>
+                <div class="pairItems">
+                    <div class="form-group col-md-6 redes">
+                        <img src="../../../assets/LinkedIn.png" alt="linkedinIcon">
+                        <input type="text" class="form-control" id="linkedin"
+                            placeholder="Linkedin: ingresá tu nombre de usuario" required>
+                    </div>
+                    <div class="form-group col-md-6 redes">
+                        <img src="../../../assets/Twitter.png" alt="twitterIcon">
+                        <input type="text" class="form-control" id="twitter"
+                            placeholder="Twitter: ingresá tu nombre de usuario" required>
+                    </div>
+                </div>
+
+                <div class="imagenesVideos">
+                    <div class="textImgVid">
+                        <h4>Imágenes y/o video</h4>
+                        <p>
+                            Podés subir hasta 2 imágenes. Formatos aceptados: jpg o png, de hasta 500 mb cada uno.
+                            Si en el próximo paso elegis exposición esencial o avanzada, vas a poder agregar más
+                            imágenes o videos.
+                            Si querés, podés saltear este paso y subirlas más adelante.
+                        </p>
+                        <div style="display: flex;">
+                            <img style="width:100px; height:100px" src="../../../assets/pan3.png" alt="">
+                            <img style="width:100px; height:100px" src="../../../assets/pan4.png" alt="">
+                        </div>
+                    </div>
+                    <button class="subir">Subir archivos</button>
+                </div>
+            </form>
+        </div>
+        <div class="footerSusc">
+            <p><i class="fa-solid fa-caret-left"></i> Volver a mi cuenta</p>
+            <button class="elegir">Elegir Suscripción</button>
+            <p><i class="fa-solid fa-floppy-disk"></i> Guardar y continuar más tarde</p>
+        </div>
+        <p style="text-align: center;">Luego de elegir y abonar tu plan, vas a poder ver tu emprendimiento publicado.
+        </p>
+    </div>
+</main>
