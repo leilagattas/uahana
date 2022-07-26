@@ -7,6 +7,7 @@ import { MainComponent } from './components/main/main.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ElegirSuscripcionComponent } from './components/register/register-emprendedor/elegir-suscripcion/elegir-suscripcion.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 // import { RecuperarPassComponent } from './components/recuperar-pass/recuperar-pass.component';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
   { path: 'cargarTrabajo', component: CargarTrabajoComponent },
   { path: 'elegirSuscripcion', component: ElegirSuscripcionComponent },
+  { path: 'busqueda', component: BusquedaComponent },
 
   // { path: 'recuperarPass/:id', component: RecuperarPassComponent },
   { path: '**', redirectTo: '/inicio' }

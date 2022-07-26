@@ -21,6 +21,9 @@ import { MisSuscripcionesComponent } from './components/perfil/mis-suscripciones
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CargarTrabajoComponent } from './components/register/register-emprendedor/cargar-trabajo/cargar-trabajo.component';
 import { ElegirSuscripcionComponent } from './components/register/register-emprendedor/elegir-suscripcion/elegir-suscripcion.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { CardTrabajoComponent } from './components/main/card-trabajo/card-trabajo.component';
+import { RdoBusquedaComponent } from './components/busqueda/rdo-busqueda/rdo-busqueda.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { ElegirSuscripcionComponent } from './components/register/register-empre
     MisSuscripcionesComponent,
     PerfilComponent,
     CargarTrabajoComponent,
-    ElegirSuscripcionComponent
+    ElegirSuscripcionComponent,
+    BusquedaComponent,
+    CardTrabajoComponent,
+    RdoBusquedaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,34 @@
+.card {
+    background-color: var(--secundario-claro1);
+    border-radius: 10px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgDestacado {
+    text-align: right;
+    width: 90%;
+}
+
+img {
+    width: 50%;
+}
+
+.card-title {
+    color: #00226D;
+    font-weight: 700;
+    font-size: var(--menu-items);
+}
+
+.card-text {
+    color: var(--gris-oscuro-tipografia);
+    font-size: var(--subtitulos);
+}
+
+.verMas {
+    color: var(--rojo-logo);
+    font-weight: 700;
+}

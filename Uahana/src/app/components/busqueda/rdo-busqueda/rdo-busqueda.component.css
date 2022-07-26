@@ -1,0 +1,66 @@
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+h5 {
+    color: var(--azul-logo);
+    font-weight: 700;
+    font-size: var(--menu-items);
+    margin: 15px 0;
+}
+
+.h5Grid {
+    text-align: center;
+}
+
+
+.h5List {
+    text-align: left;
+}
+
+.card {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.cardList {
+    display: flex;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.cardList img {
+    width: 180%;
+}
+
+.divGrid {
+    padding: 0 15px;
+}
+
+.divList {
+    padding-left: 100px;
+}
+
+.rtasGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.rtasList {
+    display: inline-block;
+    max-height: 10px;
+    width: 100%;
+}
+
+.verMasGrid {
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+}
+
+.verMasList {
+    font-weight: 700;
+}

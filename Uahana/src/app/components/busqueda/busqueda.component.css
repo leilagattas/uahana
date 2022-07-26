@@ -1,0 +1,101 @@
+.topBar {
+    background-color: var(--azul-logo);
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.topBar div {
+    padding: 20px 0;
+    width: 65%;
+}
+
+.topBar h2 {
+    font-weight: 700;
+}
+
+.topBar img {
+    border-radius: 40px 40px 0 0;
+}
+
+.busqueda {
+    padding: 60px;
+    background: var(--fondo-busqueda);
+}
+
+.filtrosRtas {
+    display: flex;
+    font-size: var(--subtitulos);
+    color: var(--gris-oscuro-tipografia);
+    justify-content: space-between;
+}
+
+.filtros {
+    padding-right: 40px;
+}
+
+h3 {
+    font-size: var(--subtitulos);
+}
+
+h3 i {
+    padding-right: 10px;
+}
+
+h4 {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: var(--subtitulos);
+}
+
+.filtros p {
+    line-height: 10px;
+    cursor: pointer;
+}
+
+.filtros p:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.rdo-busqueda {
+    width: 90%;
+}
+
+.vista {
+    display: flex;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.vista h3 {
+    color: var(--gris-oscuro-tipografia);
+}
+
+.vista i {
+    margin-left: 10px;
+    color: var(--secundario2);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.selectedI {
+    color: var(--azul-logo) !important;
+    font-weight: 600;
+}
+
+select,
+option {
+    border: 0px;
+    color: var(--azul-logo);
+    font-weight: 500;
+    background: var(--fondo-busqueda);
+    cursor: pointer;
+}
+
+select:active,
+option:active {
+    border: 0px;
+}

@@ -1,0 +1,47 @@
+<main>
+    <div class="topBar">
+        <div>
+            <h2>Encontrá en Uahana eso que estás buscando</h2>
+            <p>Cientos de emprendedores te están esperando. </p>
+        </div>
+        <img src="../../../assets/imgBusqueda.png" alt="">
+    </div>
+    <div class="vista">
+        <h3>Vista:
+            <i [ngClass]="listaView? 'fa fa-bars selectedI' : 'fa fa-bars'" (click)="changeDisplay('list')"></i>
+            <i [ngClass]="gridView? 'fa-solid fa-grip-vertical selectedI': 'fa-solid fa-grip-vertical'"
+                (click)="changeDisplay('grid')"></i>
+        </h3>
+        <h3>Ordenar por: <select name="" id="">
+                <option value="">Más Relevantes</option>
+            </select></h3>
+    </div>
+    <div class="busqueda">
+        <div class="filtrosRtas">
+            <div class="filtros">
+                <h3><i class="fa fa-filter" aria-hidden="true"></i>Filtrar por:</h3>
+                <h4>Tipo</h4>
+                <p>Servicio</p>
+                <p>Producto</p>
+                <h4>Categoría</h4>
+                <p>Comida</p>
+                <p>Hogar</p>
+                <p>Educación</p>
+                <p>Música</p>
+                <p>Paseo</p>
+                <p>Entretenimiento</p>
+                <p>Tecnología</p>
+                <p>Música</p>
+                <h4>Ubicación</h4>
+                <p>Capital Federal</p>
+                <p>GBA Norte</p>
+                <p>GBA Sur</p>
+                <p>GBA Este</p>
+                <p>GBA Oeste</p>
+                <p>Santa Fe</p>
+                <p>Córdoba</p>
+            </div>
+            <app-rdo-busqueda class="rdo-busqueda" [tipoDisplay]="tipoDisplay"></app-rdo-busqueda>
+        </div>
+    </div>
+</main>

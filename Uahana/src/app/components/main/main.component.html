@@ -3,76 +3,33 @@
         <h2>¿Qué estás buscando?</h2>
         <p>¿Buscás algún servicio o producto que nadie te sabe recomendar? Seguro podemos ayudarte &#128512;</p>
         <div class="input-group rounded">
-            <input type="Escribí eso que estas buscando" class="form-control rounded"
-                placeholder="Escribí eso que estás buscando" aria-label="Search" aria-describedby="search-addon"><i
-                class="fas fa-search"></i>
+            <input id="busqueda" type="Escribí eso que estas buscando" class="form-control rounded"
+                placeholder="Escribí eso que estás buscando" aria-label="Search" value={{busqueda}}
+                aria-describedby="search-addon"><i class="fas fa-search"></i>
         </div>
-        <p>Probá con: <a href="">Maestra particular de matemática</a><a href="">Paseador de perros</a><a href="">Pan de
-                masa madre</a><a href="">Masajes a domicilio</a></p>
+        <p>Probá con:
+            <span class="linkOpc" (click)="changeBusqueda('Maestra particular de matemática')">Maestra particular de
+                matemática</span><a href="">Paseador
+                de
+                perros</a><a href="">Pan de
+                masa madre</a><a href="">Masajes a domicilio</a>
+        </p>
     </div>
     <h5>Destacados</h5>
     <div class="row">
         <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title">Picadas para eventos</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="verMas">Ver más</a>
-                    </div>
-                    <div class="imgDestacado">
-                        <img src="../../../assets/destacados1.png" alt="">
-                    </div>
-                </div>
-            </div>
+            <app-card-trabajo [titulo]="titulo1" [descripcion]="descripcion1" [namePict]="namePict1"></app-card-trabajo>
         </div>
         <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title">Masajista a Domicilio</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="verMas">Ver más</a>
-                    </div>
-                    <div class="imgDestacado">
-                        <img src="../../../assets/destacados2.png" alt="">
-                    </div>
-                </div>
-            </div>
+            <app-card-trabajo [titulo]="titulo2" [descripcion]="descripcion2" [namePict]="namePict2"></app-card-trabajo>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title">Pintor por hora</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="verMas">Ver más</a>
-                    </div>
-                    <div class="imgDestacado">
-                        <img src="../../../assets/destacados3.png" alt="">
-                    </div>
-                </div>
-            </div>
+            <app-card-trabajo [titulo]="titulo3" [descripcion]="descripcion3" [namePict]="namePict3"></app-card-trabajo>
         </div>
         <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title">Profe de Guitarra</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="verMas">Ver más</a>
-                    </div>
-                    <div class="imgDestacado">
-                        <img src="../../../assets/destacados4.png" alt="">
-                    </div>
-                </div>
-            </div>
+            <app-card-trabajo [titulo]="titulo4" [descripcion]="descripcion4" [namePict]="namePict4"></app-card-trabajo>
         </div>
     </div>
 </main>

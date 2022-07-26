@@ -1,0 +1,12 @@
+<div [ngClass]="tipoDisplay == 'grid' ? 'rtasGrid' : 'rtasList'">
+    <div [ngClass]="tipoDisplay == 'grid' ? 'card' : 'cardList'" *ngFor="let titulo of titulos; let i = index">
+        <div>
+            <img src="../../../assets/{{imgName[i]}}" alt="">
+        </div>
+        <div [ngClass]="tipoDisplay == 'grid' ? 'divGrid': 'divList'">
+            <h5 [ngClass]="tipoDisplay == 'grid' ? 'h5Grid' : 'h5List'">{{titulo}}</h5>
+            <p class="card-text">{{descripcion[i]}}</p>
+            <a href="#" [ngClass]="tipoDisplay == 'grid' ? 'verMasGrid' : 'verMasList'">Ver más</a>
+        </div>
+    </div>
+</div>

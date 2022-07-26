@@ -41,11 +41,13 @@ input {
     font-size: var(--subtitulos);
 }
 
-a {
+a,
+.linkOpc {
     color: white;
     text-decoration: underline;
     margin-right: 5px;
     font-size: var(--subtitulos);
+    cursor: pointer;
 }
 
 h5 {
