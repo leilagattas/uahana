@@ -61,6 +61,13 @@ button {
     font-size: var(--menu-items);
     font-weight: 600;
     margin: 30px 0;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    color: var(--azul-logo);
+    background-color: white;
+    border: 1px solid var(--azul-logo);
 }
 
 input[type="checkbox"] {

@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  busqueda: string = "";
   titulo1: string = "";
   descripcion1: string = "";
   namePict1: string = "";
@@ -20,6 +19,7 @@ export class MainComponent implements OnInit {
   titulo4: string = "";
   descripcion4: string = "";
   namePict4: string = "";
+  textSearch: string = "";
 
   constructor(private _router: Router) { }
 
@@ -29,11 +29,12 @@ export class MainComponent implements OnInit {
   }
 
   changeBusqueda(busq: string) {
-    this.busqueda = busq;
+    this.textSearch = busq;
     let input = document.getElementById("busqueda");
     if (input) {
       input.style.color = "black";
     }
+    this.goBusqueda();
   }
 
   valuesCompRend() {
@@ -50,5 +51,11 @@ export class MainComponent implements OnInit {
     this.descripcion4 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     this.namePict4 = "destacados4";
   }
+
+  goBusqueda() {
+    console.log(this.textSearch);
+    this._router.navigateByUrl('/busqueda/' + this.textSearch);
+  }
+
 }
 

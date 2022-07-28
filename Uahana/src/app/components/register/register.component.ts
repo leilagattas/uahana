@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  checkedEmp: boolean = true;
+  checkedCliente: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  changeCheck() {
+    this.checkedEmp = !this.checkedEmp;
+    this.checkedCliente = !this.checkedCliente;
+  }
 }

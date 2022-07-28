@@ -4,15 +4,16 @@
         <p>¿Buscás algún servicio o producto que nadie te sabe recomendar? Seguro podemos ayudarte &#128512;</p>
         <div class="input-group rounded">
             <input id="busqueda" type="Escribí eso que estas buscando" class="form-control rounded"
-                placeholder="Escribí eso que estás buscando" aria-label="Search" value={{busqueda}}
-                aria-describedby="search-addon"><i class="fas fa-search"></i>
+                placeholder="Escribí eso que estás buscando" aria-label="Search" aria-describedby="search-addon"
+                [(ngModel)]="textSearch" [ngModelOptions]="{standalone: true}" (keyup.enter)="goBusqueda()"><i
+                class="fas fa-search"></i>
         </div>
         <p>Probá con:
             <span class="linkOpc" (click)="changeBusqueda('Maestra particular de matemática')">Maestra particular de
-                matemática</span><a href="">Paseador
-                de
-                perros</a><a href="">Pan de
-                masa madre</a><a href="">Masajes a domicilio</a>
+                matemática</span>
+            <span class="linkOpc" (click)="changeBusqueda('Paseador de perros')">Paseador de perros</span>
+            <span class="linkOpc" (click)="changeBusqueda('Pan de masa madre')">Pan de masa madre</span>
+            <span class="linkOpc" (click)="changeBusqueda('Masajes a domicilio')">Masajes a domicilio</span>
         </p>
     </div>
     <h5>Destacados</h5>

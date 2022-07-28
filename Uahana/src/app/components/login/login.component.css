@@ -5,7 +5,8 @@ main {
 }
 
 .formLogin {
-    transform: translate(100%, 10%)
+    align-self: center;
+    margin-left: calc(100vw/10);
 }
 
 h3 {

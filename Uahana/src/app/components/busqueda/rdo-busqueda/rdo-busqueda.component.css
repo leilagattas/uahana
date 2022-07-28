@@ -93,7 +93,7 @@ i {
     font-size: 20px;
 }
 
-p {
+span {
     color: #4F4F4F;
     font-weight: 700;
     font-size: var(--menu-items);
@@ -102,6 +102,6 @@ p {
     text-decoration: underline;
 }
 
-p:hover {
+span:hover {
     cursor: pointer;
 }

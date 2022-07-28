@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'cargarTrabajo', component: CargarTrabajoComponent },
   { path: 'elegirSuscripcion', component: ElegirSuscripcionComponent },
   { path: 'busqueda', component: BusquedaComponent },
+  { path: 'busqueda/:textSearch', component: BusquedaComponent },
 
   // { path: 'recuperarPass/:id', component: RecuperarPassComponent },
   { path: '**', redirectTo: '/inicio' }

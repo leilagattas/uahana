@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  textSearch: string = "";
+
+  constructor(private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getRoute();
+  }
+
+  goBusqueda() {
+    console.log(this.textSearch);
+    this._router.navigateByUrl('/busqueda/' + this.textSearch);
+  }
+
+  getRoute() {
+    // let r = this._router.getCurrentNavigation();
+    // console.log(r);
+    let id = this._activatedRoute.snapshot.paramMap.get('textSearch');
+    console.log(id);
+
+    this._activatedRoute.paramMap.subscribe(params => {
+      id = params.get('textSearch');
+    });
+    console.log(id);
+
   }
 
 }

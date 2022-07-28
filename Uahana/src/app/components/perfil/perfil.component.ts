@@ -9,6 +9,7 @@ export class PerfilComponent implements OnInit {
   datosPersonales: boolean = true;
   misTrabajos: boolean = false;
   misSuscripciones: boolean = false;
+  favoritos: boolean = false;
 
   constructor() { }
 

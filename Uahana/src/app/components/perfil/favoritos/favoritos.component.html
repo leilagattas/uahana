@@ -1,0 +1,15 @@
+<main>
+    <h2>Favoritos</h2>
+    <div class="cardList" *ngFor="let titulo of titulos; let i = index">
+        <!-- <i class="fa-solid fa-heart"></i> -->
+        <div>
+            <img src="../../../assets/{{imgName[i]}}" alt="">
+        </div>
+        <div class="divList">
+            <h5>{{titulo}}</h5>
+            <p class="card-text">{{descripcion[i]}}</p>
+            <a href="#" class="verMasList">Ver más</a>
+        </div>
+
+    </div>
+</main>

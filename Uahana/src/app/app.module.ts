@@ -24,6 +24,8 @@ import { ElegirSuscripcionComponent } from './components/register/register-empre
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { CardTrabajoComponent } from './components/main/card-trabajo/card-trabajo.component';
 import { RdoBusquedaComponent } from './components/busqueda/rdo-busqueda/rdo-busqueda.component';
+import { FormsModule } from '@angular/forms';
+import { FavoritosComponent } from './components/perfil/favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +50,13 @@ import { RdoBusquedaComponent } from './components/busqueda/rdo-busqueda/rdo-bus
     ElegirSuscripcionComponent,
     BusquedaComponent,
     CardTrabajoComponent,
-    RdoBusquedaComponent
+    RdoBusquedaComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
