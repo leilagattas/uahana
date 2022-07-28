@@ -26,6 +26,7 @@ import { CardTrabajoComponent } from './components/main/card-trabajo/card-trabaj
 import { RdoBusquedaComponent } from './components/busqueda/rdo-busqueda/rdo-busqueda.component';
 import { FormsModule } from '@angular/forms';
 import { FavoritosComponent } from './components/perfil/favoritos/favoritos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FavoritosComponent } from './components/perfil/favoritos/favoritos.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

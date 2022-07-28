@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoggingService } from 'src/app/logging.service';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
+  providers: [LoggingService]
 })
 export class MainComponent implements OnInit {
   titulo1: string = "";
@@ -21,19 +23,16 @@ export class MainComponent implements OnInit {
   namePict4: string = "";
   textSearch: string = "";
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router,
+    private _loggingService: LoggingService) { }
 
   ngOnInit(): void {
     this._router.navigate(['/comoFunciona']);
     this.valuesCompRend()
   }
 
-  changeBusqueda(busq: string) {
-    this.textSearch = busq;
-    let input = document.getElementById("busqueda");
-    if (input) {
-      input.style.color = "black";
-    }
+  changeBusqueda(e: any) {
+    this.textSearch = e.path[0].innerHTML;
     this.goBusqueda();
   }
 
@@ -53,7 +52,7 @@ export class MainComponent implements OnInit {
   }
 
   goBusqueda() {
-    console.log(this.textSearch);
+    this._loggingService.logInfo(this.textSearch);
     this._router.navigateByUrl('/busqueda/' + this.textSearch);
   }
 
