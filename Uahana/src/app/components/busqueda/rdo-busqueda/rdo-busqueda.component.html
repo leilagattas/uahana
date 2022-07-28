@@ -1,5 +1,7 @@
 <div [ngClass]="tipoDisplay == 'grid' ? 'rtasGrid' : 'rtasList'">
     <div [ngClass]="tipoDisplay == 'grid' ? 'card' : 'cardList'" *ngFor="let titulo of titulos; let i = index">
+        <i *ngIf="liked[i]" class="fa-solid fa-heart"></i>
+        <i *ngIf="!liked[i]" class="fa-regular fa-heart"></i>
         <div>
             <img src="../../../assets/{{imgName[i]}}" alt="">
         </div>
@@ -10,3 +12,4 @@
         </div>
     </div>
 </div>
+<p>Cargar más resultados</p>

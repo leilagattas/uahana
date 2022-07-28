@@ -30,6 +30,16 @@ h5 {
     margin-bottom: 20px;
 }
 
+/* .divList:hover, */
+.divGrid:hover {
+    cursor: pointer;
+}
+
+/* .cardList:hover, */
+.card:hover {
+    transform: scale(1.01);
+}
+
 .cardList img {
     width: 180%;
 }
@@ -63,4 +73,35 @@ h5 {
 
 .verMasList {
     font-weight: 700;
+}
+
+i {
+    color: var(--rojo-logo);
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+}
+
+.card i {
+    right: 2%;
+    top: 1%;
+}
+
+.cardList i {
+    right: 4%;
+    font-size: 20px;
+}
+
+p {
+    color: #4F4F4F;
+    font-weight: 700;
+    font-size: var(--menu-items);
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+p:hover {
+    cursor: pointer;
 }
