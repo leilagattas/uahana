@@ -15,6 +15,9 @@
                 <!-- <input type="submit" value="Login" onclick="lsRememberMe()"> -->
                 <a class="forget" href="">Olvidé mi contraseña</a>
             </div>
+            <div *ngIf="mensajeError.length > 0" class="alert alert-danger" role="alert">
+                {{mensajeError}}
+            </div>
             <button type="submit">Iniciar Sesión</button>
             <p>¿No estás registrado? <a class="register" routerLink="/register">Crear una cuenta GRATIS</a></p>
         </form>

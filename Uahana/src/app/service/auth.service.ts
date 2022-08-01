@@ -10,7 +10,7 @@ import { AuthResponseData } from '../interfaces/AuthResponseData';
 export class AuthService {
   host = host[1];
   secure = host[0];
-  myAppUrl: string = `${this.secure}://${this.host}:4000`
+  myAppUrl: string = `${this.secure}://${this.host}:3000/api/v1`
 
   constructor(private _http: HttpClient) { }
 
@@ -20,16 +20,13 @@ export class AuthService {
   })
 
   loginUser(usuario: string, password: string): Observable<any> {
-    const url_api = this.myAppUrl + "/user/login";
-    // return this._http
-    //   .post<UserInterface>(url_api, { usuario, password })
-    //   .pipe(map(data => data))
-    return this._http.post<AuthResponseData>(url_api,
-      {
-        usuario: usuario,
-        password: password,
-        returnSecureToken: true
-      })
+    const url_api = this.myAppUrl + "/login";
+    let user = {
+      email: usuario,
+      password: password
+    }
+    console.log(url_api, user);
+    return this._http.post(url_api, user, { headers: this.headers })
   }
 
   setToken(token: string): void {

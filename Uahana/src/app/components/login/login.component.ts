@@ -9,6 +9,8 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  mensajeError: string = "";
+
   constructor(private _authService: AuthService) { }
 
   ngOnInit(): void {
@@ -20,10 +22,14 @@ export class LoginComponent implements OnInit {
     }
     const usuario = form.value.usuario;
     const password = form.value.password;
+
     this._authService.loginUser(usuario, password).subscribe(resData => {
       console.log(resData);
     },
       error => {
+        if (error.status == 401) {
+          this.mensajeError = "El email y/o la contraseña ingresados son incorrectos."
+        }
         console.log(error);
       })
     console.log(form.value);

@@ -1,4 +1,4 @@
-const host = ["http", "127.0.0.1"];
+const host = ["http", "localhost"];
 //const host = ["https", ""];
 
 export default host;
