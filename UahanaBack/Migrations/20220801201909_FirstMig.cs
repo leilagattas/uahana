@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace uahana.Migrations
 {
-    public partial class TablesNew : Migration
+    public partial class FirstMig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,9 +32,10 @@ namespace uahana.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    email = table.Column<string>(type: "varchar(40)", maxLength: 40, nullable: false)
+                    usuarioId = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    email = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    usuarioId = table.Column<long>(type: "bigint", nullable: false),
                     nombre = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     apellido = table.Column<string>(type: "longtext", nullable: false)
@@ -46,6 +47,8 @@ namespace uahana.Migrations
                     estado = table.Column<int>(type: "int", nullable: false),
                     susImagenes = table.Column<int>(type: "int", nullable: false),
                     susExposicion = table.Column<int>(type: "int", nullable: false),
+                    mailValidado = table.Column<string>(type: "varchar(1)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     requiereClave = table.Column<string>(type: "varchar(1)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     passwordHash = table.Column<byte[]>(type: "longblob", nullable: false),
@@ -53,7 +56,7 @@ namespace uahana.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.email);
+                    table.PrimaryKey("PK_Users", x => new { x.usuarioId, x.email });
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using uahana.Models;
 
@@ -10,9 +11,10 @@ using uahana.Models;
 namespace uahana.Migrations
 {
     [DbContext(typeof(UahanaContext))]
-    partial class UahanaContextModelSnapshot : ModelSnapshot
+    [Migration("20220802131330_AddDeleted")]
+    partial class AddDeleted
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

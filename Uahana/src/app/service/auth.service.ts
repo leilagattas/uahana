@@ -3,6 +3,7 @@ import host from './host';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { AuthResponseData } from '../interfaces/AuthResponseData';
+import jwt_decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -25,17 +26,11 @@ export class AuthService {
       email: usuario,
       password: password
     }
-    console.log(url_api, user);
     return this._http.post(url_api, user, { headers: this.headers })
   }
 
   setToken(token: string): void {
     localStorage.setItem("accessToken", token)
-  }
-
-  decrypt(token: string): Observable<any> {
-    console.log(this.myAppUrl)
-    return this._http.get(this.myAppUrl + `/user/decrypt/${token}`)
   }
 
   getToken() {
@@ -56,4 +51,11 @@ export class AuthService {
     }
   }
 
+  getTokenData(token: string) {
+    try {
+      return jwt_decode(token);
+    } catch (Error) {
+      return null;
+    }
+  }
 }

@@ -51,3 +51,32 @@ p:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
+input {
+    color: var(--gris-oscuro-tipografia);
+    font-size: var(--subtitulos);
+    font-weight: 700;
+    padding: 5px 15px;
+    vertical-align: top;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+input[type="date"] {
+    width: 100%;
+}
+
+.noEditable {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.editable {
+    border: 1px solid var(--azul-logo);
+}
+
+.guardar {
+    margin-left: 50px;
+    color: green;
+    font-weight: 600;
+}

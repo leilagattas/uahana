@@ -1,30 +1,46 @@
 <main>
-    <h2>¡Hola Nicolás!</h2>
+    <h2>¡Hola {{nombreNoEditable | titlecase}}!</h2>
     <table cellspacing="0" cellpadding="0">
         <tr>
             <td class="nameLabel">Nombre</td>
-            <td class="valueLabel">Nicolás</td>
+            <!-- <td class="valueLabel">{{usuarioUpdate.Nombre | titlecase}}</td>
+             -->
+            <input [ngClass]="{'noEditable': !editable, 'editable': editable}" type="text"
+                value="{{usuarioUpdate.Nombre | titlecase}}" [(ngModel)]="usuarioUpdate.Nombre"
+                (change)="editable = true">
         </tr>
         <tr>
             <td class="nameLabel">Apellido</td>
-            <td class="valueLabel">Campos</td>
+            <input [ngClass]="{'noEditable': !editable, 'editable': editable}" type="text"
+                value="{{usuarioUpdate.Apellido | titlecase}}" [(ngModel)]="usuarioUpdate.Apellido"
+                (change)="editable = true">
         </tr>
         <tr>
             <td class="nameLabel">Email</td>
-            <td class="valueLabel">nicoca@hotmail.com</td>
+            <input [ngClass]="{'noEditable': !editable, 'editable': editable}" type="email"
+                value="{{usuarioUpdate.email | lowercase}}" [(ngModel)]="usuarioUpdate.email"
+                (change)="editable = true">
         </tr>
         <tr>
             <td class="nameLabel">Fecha de Nacimiento</td>
-            <td class="valueLabel">09/06/1981</td>
+            <input [ngClass]="{'noEditable': !editable, 'editable': editable}" type="date"
+                value="{{usuarioUpdate.FechaNacimiento}}" [(ngModel)]="usuarioUpdate.FechaNacimiento"
+                (change)="editable = true">
         </tr>
         <tr>
             <td class="nameLabel">DNI</td>
-            <td class="valueLabel">34567890</td>
+            <input [ngClass]="{'noEditable': !editable, 'editable': editable}" type="number"
+                value="{{ usuarioUpdate.DNI }}" [(ngModel)]="usuarioUpdate.DNI" (change)="editable = true">
+        </tr>
+        <tr *ngIf="editable">
+            <td></td>
+            <p (click)="updateUser()" class="guardar"><i class="fas fa-save"></i>Guardar</p>
         </tr>
     </table>
     <div class="options">
-        <p><i class="fas fa-edit"></i>Editar información personal</p>
+        <p (click)="editable=!editable"><i class="fas fa-edit"></i>Editar información personal</p>
         <p><i class="fa fa-lock"></i>Cambiar contraseña</p>
-        <p><i class="fa fa-sign-out"></i>Cerrar Sesión</p>
+        <p (click)="onLogout()"><i class="fa fa-sign-out"></i>Cerrar Sesión</p>
     </div>
+    <notifier-container></notifier-container>
 </main>

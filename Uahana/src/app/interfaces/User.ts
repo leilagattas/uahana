@@ -4,6 +4,6 @@ export interface User {
     fechaNacimiento: Date,
     dni: bigint,
     email: string,
-    password: string,
-    tipoUsuario: number
+    password?: string,
+    tipoUsuario?: number
 }

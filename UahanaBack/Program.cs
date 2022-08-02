@@ -7,22 +7,11 @@ using System.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
 using uahana.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //CORS
-
-//var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-// builder.Services.AddCors(options =>
-// {
-//     options.AddPolicy(name: MyAllowSpecificOrigins,
-//                       policy =>
-//                       {
-//                           policy.WithOrigins("http://localhost:4200/register");
-//                       });
-// });
 builder.Services.AddCors();
 
 // Add services to the container.
@@ -62,11 +51,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 #region Servicios
 
 builder.Services.AddScoped<IUserService, UserService>();
-
 #endregion
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
 
@@ -78,15 +67,6 @@ app.UseCors(options =>
     options.AllowAnyMethod();
     options.AllowAnyHeader();
 });
-
-// var urlAceptadas = builder.Configuration
-//                        .GetSection("AllowedHosts").Value.Split(",");
-
-// var urlAceptadas = "http://localhost:4200";
-// app.UseCors(builder => builder.WithOrigins(urlAceptadas)
-//                            .AllowAnyHeader()
-//                            .AllowAnyMethod()
-//                            );
 
 
 // Configure the HTTP request pipeline.

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   mensajeError: string = "";
 
-  constructor(private _authService: AuthService) { }
+  constructor(private _router: Router, private _authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -25,14 +26,20 @@ export class LoginComponent implements OnInit {
 
     this._authService.loginUser(usuario, password).subscribe(resData => {
       console.log(resData);
+      this._authService.setToken(resData.token);
+      this._router.navigateByUrl("/inicio")
+        .then(() => {
+          window.location.reload();
+        });;;
     },
       error => {
         if (error.status == 401) {
           this.mensajeError = "El email y/o la contraseña ingresados son incorrectos."
         }
-        console.log(error);
+        if (error.status == 400) {
+          this.mensajeError = "Debe validar su cuenta a partir del correo enviado."
+        }
       })
-    console.log(form.value);
   }
 
 }

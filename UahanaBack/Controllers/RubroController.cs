@@ -17,7 +17,7 @@ namespace uahana.Controllers
         }
 
         [HttpGet]
-        // [Authorize]
+        [Authorize]
         public IEnumerable<Rubro> GetAll()
         {
             return _context.Rubros.ToList();

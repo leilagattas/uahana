@@ -62,3 +62,6 @@ C:\Users\leila\Desktop\UAHANA\UahanaBack\obj\Debug\net6.0\refint\uahana.dll
 C:\Users\leila\Desktop\UAHANA\UahanaBack\obj\Debug\net6.0\uahana.pdb
 C:\Users\leila\Desktop\UAHANA\UahanaBack\obj\Debug\net6.0\uahana.genruntimeconfig.cache
 C:\Users\leila\Desktop\UAHANA\UahanaBack\obj\Debug\net6.0\ref\uahana.dll
+C:\Users\leila\Desktop\UAHANA\UahanaBack\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\leila\Desktop\UAHANA\UahanaBack\bin\Debug\net6.0\SendGrid.dll
+C:\Users\leila\Desktop\UAHANA\UahanaBack\bin\Debug\net6.0\StarkbankEcdsa.dll

@@ -1,6 +1,9 @@
 <main>
-    <div>
-        <img src="../../../assets/fotoPerfil.png" alt="fotoPerfil">
+    <div class="mainDiv">
+        <div class="container">
+            <img src=" ../../../assets/lackImage.png" alt="fotoPerfil">
+            <h6 class="changeImage">Cambiar imagen</h6>
+        </div>
         <br>
         <div class="menu">
             <p [ngClass]="datosPersonales? 'link activo' : 'link'"
@@ -17,7 +20,7 @@
                 Favoritos</p> <br>
         </div>
     </div>
-    <app-datos-personales class="info" *ngIf="datosPersonales"></app-datos-personales>
+    <app-datos-personales class="info" *ngIf="datosPersonales" [datosUser]="datosUsuarios"></app-datos-personales>
     <app-mis-trabajos class="info" *ngIf="misTrabajos"></app-mis-trabajos>
     <app-mis-suscripciones class="info" *ngIf="misSuscripciones"></app-mis-suscripciones>
     <app-favoritos class="info" *ngIf="favoritos"></app-favoritos>

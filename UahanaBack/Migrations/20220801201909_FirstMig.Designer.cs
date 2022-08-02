@@ -11,8 +11,8 @@ using uahana.Models;
 namespace uahana.Migrations
 {
     [DbContext(typeof(UahanaContext))]
-    [Migration("20220801143745_TablesNew")]
-    partial class TablesNew
+    [Migration("20220801201909_FirstMig")]
+    partial class FirstMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,9 +55,12 @@ namespace uahana.Migrations
 
             modelBuilder.Entity("uahana.Models.User", b =>
                 {
+                    b.Property<long>("usuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
                     b.Property<string>("email")
-                        .HasMaxLength(40)
-                        .HasColumnType("varchar(40)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("apellido")
                         .IsRequired()
@@ -74,6 +77,10 @@ namespace uahana.Migrations
 
                     b.Property<DateTime>("fechaNacimiento")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<string>("mailValidado")
+                        .IsRequired()
+                        .HasColumnType("varchar(1)");
 
                     b.Property<string>("nombre")
                         .IsRequired()
@@ -100,10 +107,7 @@ namespace uahana.Migrations
                     b.Property<int>("tipoUsuario")
                         .HasColumnType("int");
 
-                    b.Property<long>("usuarioId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("email");
+                    b.HasKey("usuarioId", "email");
 
                     b.ToTable("Users");
                 });

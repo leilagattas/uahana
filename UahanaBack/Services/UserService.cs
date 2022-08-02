@@ -10,6 +10,7 @@ namespace uahana.Services
     public interface IUserService
     {
         User Authenticate(string username, string password);
+        bool FindUser(string email);
         IEnumerable<User> GetAll();
         User GetByUserName(string username);
         User Create(User user, string password);
@@ -40,7 +41,16 @@ namespace uahana.Services
                 return null;
 
             return user;
+        }
 
+
+        public bool FindUser(string email)
+        {
+            var user = _context.Users.SingleOrDefault(x => x.email == email);
+
+            if (user == null)
+                return false;
+            return true;
         }
 
         public User Create(User user, string password)
@@ -83,30 +93,41 @@ namespace uahana.Services
 
         public User GetByUserName(string username)
         {
-            return _context.Users.Find(username);
+            return _context.Users.FirstOrDefault(x => x.email == username && x.borrado == 'N');
+            //return _context.Users.Find(username);
         }
 
-        public void Update(User userParam, string password = null)
+        public void Update(User userParam, string tipoAct)
         {
-            var user = _context.Users.Find(userParam.email);
+            var user = GetByUserName(userParam.email);
 
             if (user == null)
                 throw new ArgumentException("Usuario no existe");
 
-            user.apellido = userParam.apellido;
-            user.nombre = userParam.nombre;
-            user.dni = userParam.dni;
-            user.fechaNacimiento = userParam.fechaNacimiento;
-            user.susExposicion = userParam.susExposicion;
-            user.susImagenes = userParam.susImagenes;
-
-            if (string.IsNullOrWhiteSpace(password))
+            if (tipoAct == "mailValidation")
             {
-                byte[] passwordHash, passwordSalt;
-                CreatePasswordHash(password, out passwordHash, out passwordSalt);
-                user.passwordHash = passwordHash;
-                user.passwordSalt = passwordSalt;
+                user.mailValidado = userParam.mailValidado;
             }
+            else if (tipoAct == "datosPersonales")
+            {
+                user.apellido = userParam.apellido;
+                user.nombre = userParam.nombre;
+                user.dni = userParam.dni;
+                user.fechaNacimiento = userParam.fechaNacimiento;
+            }
+            else if (tipoAct == "suscripciones")
+            {
+                user.susExposicion = userParam.susExposicion;
+                user.susImagenes = userParam.susImagenes;
+            }
+
+            // if (string.IsNullOrWhiteSpace(password))
+            // {
+            //     byte[] passwordHash, passwordSalt;
+            //     CreatePasswordHash(password, out passwordHash, out passwordSalt);
+            //     user.passwordHash = passwordHash;
+            //     user.passwordSalt = passwordSalt;
+            // }
 
             _context.Users.Update(user);
             _context.SaveChanges();

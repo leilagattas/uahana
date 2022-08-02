@@ -73,3 +73,10 @@ button {
     color: white;
     border: 1px solid;
 }
+
+.usuarioLogged {
+    border-radius: 50%;
+    width: 45px;
+    padding: 0;
+    cursor: pointer;
+}

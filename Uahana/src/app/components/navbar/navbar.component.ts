@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,10 +10,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   textSearch: string = "";
+  logged: boolean = false;
 
-  constructor(private _router: Router, private _activatedRoute: ActivatedRoute) { }
+  constructor(private _router: Router, private _activatedRoute: ActivatedRoute, private _authService: AuthService) { }
 
   ngOnInit(): void {
+    this.checkLogged()
     this.getRoute();
   }
 
@@ -32,6 +35,17 @@ export class NavbarComponent implements OnInit {
     });
     console.log(id);
 
+  }
+
+  checkLogged() {
+    let token = this._authService.getToken();
+    if (token != null) {
+      this.logged = true;
+    }
+  }
+
+  goProfile() {
+    this._router.navigateByUrl("/perfil");
   }
 
 }

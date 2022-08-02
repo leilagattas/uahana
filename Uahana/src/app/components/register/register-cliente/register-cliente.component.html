@@ -41,4 +41,9 @@
     <div><input type="checkbox" value="lsbusco" id="terminos" name="checkTyC" ngModel> <label for="terminos"
             class="tyc">Acepto los <a href="">Términos y Condiciones</a></label></div>
     <button type="submit">Crear Cuenta</button>
+    <app-spinner *ngIf="loading"></app-spinner>
+    <div *ngIf="mensajeRespuesta.length > 0"
+        [ngClass]="{'alert alert-danger' : rtaError, 'alert alert-success': !rtaError}">
+        {{mensajeRespuesta}}
+    </div>
 </form>
